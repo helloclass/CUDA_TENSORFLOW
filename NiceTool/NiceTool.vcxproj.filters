@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include="kermel.cu">
+      <Filter>Session\Operator\CUDA</Filter>
+    </CudaCompile>
+    <CudaCompile Include="calMain.cpp">
+      <Filter>Session\Operator</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Session">
+      <UniqueIdentifier>{673ac99c-8418-4c01-848f-209175d3f3b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="etc">
+      <UniqueIdentifier>{7a9b3e0e-a02f-4be9-a1d2-d40d7ffab8e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="structTemp">
+      <UniqueIdentifier>{9378fc45-8525-498f-96d4-6967882c1d23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\Operator">
+      <UniqueIdentifier>{518ed68c-5150-49de-8e42-d503e57ba919}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\Operator\CUDA">
+      <UniqueIdentifier>{f1f470f2-10bc-47bf-b74e-efae078f0df7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="kernel.cuh">
+      <Filter>Session\Operator\CUDA</Filter>
+    </ClInclude>
+    <ClInclude Include="sturctTempSet.h">
+      <Filter>structTemp</Filter>
+    </ClInclude>
+    <ClInclude Include="printMat.h">
+      <Filter>etc</Filter>
+    </ClInclude>
+    <ClInclude Include="initMat.h">
+      <Filter>etc</Filter>
+    </ClInclude>
+    <ClInclude Include="calMain.h">
+      <Filter>Session\Operator</Filter>
+    </ClInclude>
+    <ClInclude Include="Main_Session.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="printMat.cpp">
+      <Filter>etc</Filter>
+    </ClCompile>
+    <ClCompile Include="structTempSet.cpp">
+      <Filter>structTemp</Filter>
+    </ClCompile>
+    <ClCompile Include="mainSource.cpp" />
+    <ClCompile Include="initMat.cpp">
+      <Filter>etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Main_Session.cpp">
+      <Filter>Session</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
