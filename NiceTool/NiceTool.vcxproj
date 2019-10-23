@@ -15,19 +15,31 @@
     <CudaCompile Include="calMain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ActivationFunc.h" />
     <ClInclude Include="calMain.h" />
+    <ClInclude Include="createHyperparam.h" />
+    <ClInclude Include="Header.h" />
     <ClInclude Include="initMat.h" />
     <ClInclude Include="kernel.cuh" />
     <ClInclude Include="Main_Session.h" />
     <ClInclude Include="printMat.h" />
-    <ClInclude Include="sturctTempSet.h" />
+    <ClInclude Include="simpleOp.h" />
+    <ClInclude Include="structTempSet.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ActivationFunc.cpp" />
+    <ClCompile Include="createHyperparam.cpp" />
     <ClCompile Include="initMat.cpp" />
+    <ClCompile Include="initVariable.cpp" />
     <ClCompile Include="mainSource.cpp" />
     <ClCompile Include="Main_Session.cpp" />
+    <ClCompile Include="post_prop.cpp" />
     <ClCompile Include="printMat.cpp" />
+    <ClCompile Include="simpleOp.cpp" />
     <ClCompile Include="structTempSet.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="readme.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F639A6EE-BFBF-49AD-B8A7-3E2F636C4913}</ProjectGuid>

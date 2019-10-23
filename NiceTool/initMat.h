@@ -1,5 +1,5 @@
 #pragma once
-#include "sturctTempSet.h"
+#include "structTempSet.h"
 
-d_arr* initMat(int row, int col, double val);
-i_arr* initIntMat(int row, int col, int val);
+d_arr* initMat(int, int, double);
+i_arr* initIntMat(int, int, int);

@@ -14,7 +14,7 @@ void get_mul(double* res, double* a, double* b, int idx, int K_m, int K_n, int K
 	int k = get_col(idx, K_k);
 
 	for (int n = 0; n < K_n; n++)
-		res[idx] = a[m * K_n + n] * b[n * K_k + k];
+		res[m * K_k + k] += a[idx] * b[n * K_k + k];
 }
 
 __global__

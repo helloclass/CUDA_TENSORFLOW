@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "kernel.cuh"
-#include "sturctTempSet.h"
+#include "structTempSet.h"
 
 d_arr* matmul(d_arr* op1, d_arr* op2)
 {
+	int maxBlockSizeTreadSize;	// Max Size of blockIdx.x, threadIdx.x;
 	int m, n, k;
 	m = op1->raw;
 	n = op1->col;
@@ -24,7 +25,8 @@ d_arr* matmul(d_arr* op1, d_arr* op2)
 	cudaMemcpy(d_b, op2->arr, sizeof(double) * n * k, cudaMemcpyHostToDevice);
 	cudaMemcpy(d_res, res, sizeof(double) * m * k, cudaMemcpyHostToDevice);
 
-	mmul<<<1, (m * k)>>>(d_a, d_b, d_res, m, n, k);
+	maxBlockSizeTreadSize = ((m * k) > 1024 ? 1024 : (m * k));
+	mmul<<<256, maxBlockSizeTreadSize>>>(d_a, d_b, d_res, m, n, k);
 
 	cudaMemcpy(res, d_res, sizeof(double) * m * k, cudaMemcpyDeviceToHost);
 	

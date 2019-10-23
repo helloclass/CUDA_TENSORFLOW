@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "sturctTempSet.h"
+#include "structTempSet.h"
 #include "Main_Session.h"
 
 d_arr* initMat(int row, int col, double val) {

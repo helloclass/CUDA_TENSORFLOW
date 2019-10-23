@@ -1,25 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "calMain.h"
-#include "printMat.h"
-#include "sturctTempSet.h"
-#include "Main_Session.h"
-#include "initMat.h"
+#include <crtdbg.h>
+#include "Header.h"
+#define Percep d_arr***
+#define BLANK printf("\n");
+
+void printPercep(Percep p);
 
 int main() {
-	d_arr *op1, *op2, *res;
-	int m, n, k;
-	m = 4;
-	n = 3;
-	k = 5;
+	d_arr *op1;
+	op1 = initMat(10, 11, -1);
+	relu(op1);
 
-	op1 = initMat(m, n, 1);
-	op2 = initMat(n, k, 2);
+	printMat(op1);
 
-	res = matmul(op1, op2);
-
-	printMat(res);
-
-	freeMat();
+	close();
+	_CrtDumpMemoryLeaks();
 	return 0;
+}
+
+void printPercep(Percep p) {
+	int size = _msize(p[0]) / (sizeof(int) * 2); //W의 주소와 b의 주소를 가지기에 sizeof(int)에 X2
+
+	printf("===================\n");
+	for (int i = 0; i < size; i++) {
+		shape(p[0][i]);
+		BLANK;
+		printf("W%d: \n", i + 1);
+		printMat(p[0][i]);
+
+		shape(p[1][i]);
+		BLANK;
+		printf("b%d: \n", i + 1);
+		printMat(p[1][i]);
+
+		printf("===================\n");
+	}
 }

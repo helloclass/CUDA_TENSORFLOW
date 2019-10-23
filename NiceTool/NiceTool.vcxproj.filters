@@ -5,7 +5,7 @@
       <Filter>Session\Operator\CUDA</Filter>
     </CudaCompile>
     <CudaCompile Include="calMain.cpp">
-      <Filter>Session\Operator</Filter>
+      <Filter>Session\Operator\handle_CUDA</Filter>
     </CudaCompile>
   </ItemGroup>
   <ItemGroup>
@@ -24,13 +24,28 @@
     <Filter Include="Session\Operator\CUDA">
       <UniqueIdentifier>{f1f470f2-10bc-47bf-b74e-efae078f0df7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Session\Variable">
+      <UniqueIdentifier>{7a0a5ce9-fa3e-4faf-952c-dd29d31204d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\Operator\handle_CUDA">
+      <UniqueIdentifier>{ee351a81-1be1-4666-accf-1513affde082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\run">
+      <UniqueIdentifier>{7fe96b69-9390-4f78-b3e6-08417d9932cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\Operator\Simple_Op">
+      <UniqueIdentifier>{2cdc82b9-e9ed-4622-8141-ef9f7df506b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NN">
+      <UniqueIdentifier>{f3fc1693-df40-4ca6-b9c2-9cac44dcfc3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NN\active">
+      <UniqueIdentifier>{18f552a8-7a0a-4e20-a8a7-219551ae4d2b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kernel.cuh">
       <Filter>Session\Operator\CUDA</Filter>
-    </ClInclude>
-    <ClInclude Include="sturctTempSet.h">
-      <Filter>structTemp</Filter>
     </ClInclude>
     <ClInclude Include="printMat.h">
       <Filter>etc</Filter>
@@ -38,11 +53,26 @@
     <ClInclude Include="initMat.h">
       <Filter>etc</Filter>
     </ClInclude>
-    <ClInclude Include="calMain.h">
-      <Filter>Session\Operator</Filter>
-    </ClInclude>
     <ClInclude Include="Main_Session.h">
       <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>etc</Filter>
+    </ClInclude>
+    <ClInclude Include="createHyperparam.h">
+      <Filter>Session\Variable</Filter>
+    </ClInclude>
+    <ClInclude Include="calMain.h">
+      <Filter>Session\Operator\handle_CUDA</Filter>
+    </ClInclude>
+    <ClInclude Include="structTempSet.h">
+      <Filter>structTemp</Filter>
+    </ClInclude>
+    <ClInclude Include="simpleOp.h">
+      <Filter>Session\Operator\Simple_Op</Filter>
+    </ClInclude>
+    <ClInclude Include="ActivationFunc.h">
+      <Filter>NN\active</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -59,5 +89,25 @@
     <ClCompile Include="Main_Session.cpp">
       <Filter>Session</Filter>
     </ClCompile>
+    <ClCompile Include="createHyperparam.cpp">
+      <Filter>Session\Variable</Filter>
+    </ClCompile>
+    <ClCompile Include="post_prop.cpp">
+      <Filter>Session\run</Filter>
+    </ClCompile>
+    <ClCompile Include="simpleOp.cpp">
+      <Filter>Session\Operator\Simple_Op</Filter>
+    </ClCompile>
+    <ClCompile Include="ActivationFunc.cpp">
+      <Filter>NN\active</Filter>
+    </ClCompile>
+    <ClCompile Include="initVariable.cpp">
+      <Filter>Session\Variable</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="readme.txt">
+      <Filter>Session\Operator</Filter>
+    </Text>
   </ItemGroup>
 </Project>
